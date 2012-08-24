@@ -1,0 +1,26 @@
+class Nomina {
+    public static void pago(double base, int horas) {
+        
+        if (base < 8.0) {
+		    System.out.println("se tiene que pagar almenos 8.0$ por hora");
+		} 
+			if (horas > 60){
+		    System.out.println("no se debe trabajar mas de 60 horas por semana");
+        }
+         else
+        {
+        int HorasExtra = 0;
+        if (horas > 40)
+        {
+           HorasExtra = horas -40;
+           horas = 40; 
+		}
+		double pago = base * horas;
+		pago += HorasExtra * base * 1.5;
+		System.out.println("Se tiene que pagar $" + pago);
+        }
+	}
+    public static void main(String[] arguments) { 
+		pago(7.88, 30);pago(8.7, 47);pago(12.0, 62);
+    }
+}

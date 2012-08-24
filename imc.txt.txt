@@ -1,0 +1,50 @@
+public class Imc {
+public static void main(String[] args) {
+System.out.print("Calcular el imc");
+
+String nombre = (System.console().readLine());
+         
+       
+System.out.println("su estatura por favor ?");
+double estatura = Double.parseDouble (System.console().readLine());
+System.out.println("su peso por favor ?");
+double peso = Double.parseDouble(System.console().readLine());
+double imc = peso/(estatura * estatura);
+System.out.println(
+"su masa corporal es:");
+System.out.println(imc);
+if (imc<18.50) {
+	System.out.println("Hola"+ nombre +" usted muestra un infrapeso " );
+}
+if (imc<16.00) {
+	System.out.println("Hola "+nombre+" usted muestra una delgadez severa ");
+}
+if (imc>=16.00&&imc<16.99) {
+	System.out.println("Hola "+ nombre +" usted tiene una delgadez moderada ");
+}
+if (imc>=17.00&&imc<18.49) {
+	System.out.println("Hola "+ nombre +" usted tiene delgadez no muy moderada ");
+}
+if (imc>=18.5&&imc<24.99) {
+	System.out.println("Hola "+ nombre +"  usted tiene un Peso normal ");
+}
+if (imc>=25.00) {
+	System.out.println("Hola "+ nombre +"  usted tiene sobrepeso ");
+}
+if (imc>25.00&&imc<29.99) {
+	System.out.println("Hola "+ nombre +"  usted tiene preobesidad");
+}
+if (imc>=30.00) {
+	System.out.println("Hola "+ nombre +"  usted tiene obesidad");
+}
+if (imc>30.00&&imc<34.99) {
+	System.out.println("Hola "+ nombre +"  usted tiene Obesidad tipo I ");
+}
+if (imc>35.00&&imc<39.99) {
+	System.out.println("Hola "+ nombre +"  usted tiene Obesidad tipo II ");
+}
+if (imc>=40.00) {
+	System.out.println("Hola "+ nombre +"  usted tiene Obesidad tipo III ");
+}
+	}
+}

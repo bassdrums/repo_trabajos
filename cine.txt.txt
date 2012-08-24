@@ -1,0 +1,46 @@
+class Cine{
+
+    public static void main(String [] args){
+	
+	   
+		int Boletas, Funcion, Localidad;
+	
+	    System.out.println("funcion a la que quiere ingresar?");
+		System.out.println("Presione (1) para presentarse a la funcion 2d y (2) para presentarde a la funcion 3d");
+		    String date1 = System.console().readLine();
+			Funcion = Integer.parseInt(date1);
+			
+		System.out.println("A que localidad desea ingresar?");
+		System.out.println("digite 1 para localidad general o 2 para localidad preferencial");
+			String date2 = System.console().readLine();
+			Localidad = Integer.parseInt(date2);
+			
+		System.out.println("Digite la cantidad de boletas a comprar?");
+		    String date3 = System.console().readLine();
+			Boletas = Integer.parseInt(date3);
+			
+			int precio=0;
+			
+			    if ((Funcion == 1) && (Localidad == 1 || Localidad == 2)){
+						   
+			    if (Localidad == 1){precio = Boletas * 8000;
+				}if (Localidad == 2){precio = Boletas * 11000;
+				} 
+					System.out.println("El total a pagar es: " + precio);
+				} 
+			
+			
+			    if ((Funcion == 2) && (Localidad == 1 || Localidad == 2)){
+			
+			    if (Localidad == 1){precio = (Boletas * 12000) + (Boletas * 3000);
+			    }if(Localidad == 2){precio = (Boletas * 15000) + (Boletas * 3000);
+			    } 	
+			        System.out.println("El total a pagar con las gafas 3d es: " + precio);
+			    }
+	
+    
+	            if ((Funcion != 1 && Funcion != 2)|| (Localidad != 1 && Localidad != 2)){
+			    System.out.println("Error");
+	  }
+	 }
+	}
